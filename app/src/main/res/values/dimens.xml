@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_eight">8dp</dimen>
+    <dimen name="space_sixteen">16dp</dimen>
+    <dimen name="space_twenty_four">24dp</dimen>
+    <dimen name="space_thirty_two">32dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_default_width">300dp</dimen>
+    <dimen name="button_default_height">50dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_size_sixteen">16sp</dimen>
+    <dimen name="text_size_eighteen">18sp</dimen>
+    <dimen name="text_size_twenty_two">22sp</dimen>
+
+    <!-- Circle Viewpager Indicator -->
+    <dimen name="circle_vp_indicator_width">156dp</dimen>
+
+    <!-- Onbording Images -->
+    <dimen name="onboarding_image_size">40dp</dimen>
+
+    <!-- Avatar Icon Size -->
+    <dimen name="avatar_icon_size">70dp</dimen>
+</resources>

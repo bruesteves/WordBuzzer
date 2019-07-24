@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:background="@drawable/alpha_bg"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <Button style="@style/ColoredButton"
+            android:id="@+id/select_action_btn_player_selection"
+            android:text="@string/select_action_btn_play"
+            android:layout_width="@dimen/button_default_width"
+            android:layout_height="@dimen/button_default_height"/>
+
+    <Button style="@style/InvertedButton"
+            android:id="@+id/select_action_btn_onboarding"
+            android:layout_marginTop="@dimen/button_default_height"
+            android:text="@string/select_action_btn_onboarding"
+            android:layout_width="@dimen/button_default_width"
+            android:layout_height="@dimen/button_default_height"/>
+
+</LinearLayout>

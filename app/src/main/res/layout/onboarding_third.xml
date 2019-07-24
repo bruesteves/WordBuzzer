@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="20dp"
+              android:id="@+id/bio_access_photo_hint_bg"
+              android:orientation="vertical"
+              android:paddingBottom="60dp">
+
+    <TextView
+            android:id="@+id/tvBioAccessIntroSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/sfdisplay_regular"
+            android:lines="4"
+            android:gravity="center"
+            android:text="@string/onboarding_three"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_eighteen"/>
+
+    <ImageView
+            android:contentDescription="@null"
+            android:layout_width="@dimen/onboarding_image_size"
+            android:layout_height="@dimen/onboarding_image_size"
+            android:layout_marginTop="@dimen/space_sixteen"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_click"/>
+</LinearLayout>

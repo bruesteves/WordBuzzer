@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Word Buzzer</string>
+
+    <!-- Select Action Screen -->
+    <string name="select_action_btn_play">Play now</string>
+    <string name="select_action_btn_onboarding">Tutorial</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_next_btn">Next</string>
+    <string name="onboarding_play_btn">Play now</string>
+
+    <!-- Onboarding Pages -->
+    <string name="onboarding_one">Pay attention at the word that is located\nat the center of the screen.</string>
+    <string name="onboarding_two">Many different words will move \nfrom one corner to another.</string>
+    <string name="onboarding_three">If you think that the moving word matches with the translation\n of the centered
+        word, click the button that refers to your player.\n Have fun!
+    </string>
+
+    <!-- Player Selection -->
+    <string name="player_selection_title">Select your player</string>
+    <string name="player_selection_button_ready">Ready</string>
+    <string name="player_selection_text_input_hint">Name</string>
+
+    <!-- Game -->
+    <string name="game_btn">Buzz</string>
+    <string name="game_winner_sentence">And the winner is %s</string>
+    <string name="game_player_one">Player One</string>
+    <string name="game_player_two">Player Two</string>
+</resources>

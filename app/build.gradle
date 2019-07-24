@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+def cfg = rootProject.ext.configuration
+def libs = rootProject.ext.libraries
+def testLibs = rootProject.ext.testingLibraries
+
+android {
+    compileSdkVersion cfg.compileVersion
+    defaultConfig {
+        applicationId cfg.applicationId
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdk
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.kotlin.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // App Compat
+    implementation "androidx.appcompat:appcompat:$libs.appCompat"
+
+    // Constraint
+    implementation "androidx.constraintlayout:constraintlayout:$libs.constraintLayout"
+
+    // Material
+    implementation "com.google.android.material:material:$libs.material"
+
+    // Recycler View
+    implementation "com.android.support:recyclerview-v7:$libs.buildToolVesion"
+
+    // Anko - DSL for faster development
+    implementation "org.jetbrains.anko:anko:$libs.anko"
+
+    // Circle Indicator
+    implementation "me.relex:circleindicator:$libs.circleIndicator"
+
+    // KTX
+    implementation "androidx.core:core-ktx:$libs.ktx"
+
+    // Reactive Programming
+    implementation "io.reactivex.rxjava2:rxkotlin:$libs.rxKotlin"
+    implementation "io.reactivex.rxjava2:rxandroid:$libs.rxAndroid"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$libs.rxjavaAdapter"
+
+    // Dagger - Dependency Injection
+    kapt "com.google.dagger:dagger-compiler:$libs.dagger"
+    implementation "com.google.dagger:dagger:$libs.dagger"
+    implementation "com.google.dagger:dagger-android-support:$libs.dagger"
+    kapt "com.google.dagger:dagger-android-processor:$libs.dagger"
+
+    // LifeCycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$libs.lifecycle"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$libs.glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$libs.glide"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$libs.gson"
+
+    // Lottie
+    implementation "com.airbnb.android:lottie:$libs.lottie"
+
+    // Test libs
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation "junit:junit:$testLibs.junit"
+    androidTestImplementation "androidx.test:runner:$testLibs.runner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$testLibs.espresso"
+}
